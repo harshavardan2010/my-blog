@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+{% set postCount = collections.posts | length %}
+{% for post in collections.posts | reverse %}
+{% set seqNum = postCount - loop.index0 %}
+<article class="log-entry">
+    <div class="entry-meta">
+        <span class="entry-id">SEQ_{{ seqNum | seqformat }}</span>
+        <span>{{ post.date | blogdate }}</span>
+        <span>[{{ post.data.category }}]</span>
+    </div>
+    <h2 class="entry-title">{{ post.data.title }}</h2>
+    <p class="entry-excerpt">{{ post.data.excerpt }}</p>
+    <a href="{{ post.url }}" class="action-btn">Read Record</a>
+</article>
+{% endfor %}
