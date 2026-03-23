@@ -14,6 +14,6 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["OBSERVATION", "ARCHITECTURE", "HARDWARE", "ARCHIVE", "MISC"], default: "OBSERVATION"}
+      - {label: "Category", name: "category", widget: "select", options: ["OBSERVATION", "GAMING", "SPIRITUALITY", "MARKETING", "MISC", "BUSINESS"], default: "OBSERVATION"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}

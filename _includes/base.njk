@@ -114,17 +114,17 @@
             gap: 4px;
         }
         .stat-block:last-child { border-right: none; }
-        .stat-sub { font-size: 11px; color: var(--ink-ghost); letter-spacing: 0.5px; min-height: 13px; display: block; }
+        .stat-sub { font-size: 11px; color: var(--ink-main); opacity: 0.55; letter-spacing: 0.5px; min-height: 13px; display: block; }
         .stat-label { font-size: 16px; font-weight: bold; }
 
         .progress-bar {
             width: 100%;
-            height: 6px;
+            height: 8px;
             border: 2px solid var(--ink-main);
             border-radius: 10px;
             padding: 1px;
         }
-        .progress-fill { height: 100%; background: var(--ink-main); border-radius: 4px; }
+        .progress-fill { height: 100%; background: var(--ink-main); border-radius: 4px; transition: width 1.2s ease; }
 
         /* ── Main layout ── */
         .main-display {
@@ -179,7 +179,7 @@
             border-bottom: 2px dotted var(--ink-ghost);
             padding-bottom: 2px;
         }
-        .info-label { color: var(--ink-ghost); }
+        .info-label { color: var(--ink-main); opacity: 0.6; }
 
         .sys-message { display: none; } /* hidden on mobile */
 
@@ -370,7 +370,7 @@
             .stat-label { font-size: 18px; }
             .bottom-nav { height: 60px; }
             .icon-svg { width: 32px; height: 32px; }
-            .telemetry-bar .stat-block { padding: 8px 12px; gap: 6px; }
+            .telemetry-bar .stat-block { padding: 8px 12px; gap: 3px; min-height: 58px; }
         }
 
         /* ── Post content styles ── */
@@ -459,32 +459,32 @@
                 <div class="stat-block">
                     <span class="stat-label">LOGS</span>
                     <span class="stat-sub" id="sub-logs"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-logs" style="width:85%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-logs" style="width:0%"></div></div>
                 </div>
                 <div class="stat-block">
                     <span class="stat-label">FOCUS</span>
                     <span class="stat-sub" id="sub-focus"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-focus" style="width:40%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-focus" style="width:0%"></div></div>
                 </div>
                 <div class="stat-block">
                     <span class="stat-label">CAFF</span>
                     <span class="stat-sub" id="sub-caff"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-caff" style="width:95%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-caff" style="width:0%"></div></div>
                 </div>
                 <div class="stat-block">
                     <span class="stat-label">SLEEP</span>
                     <span class="stat-sub" id="sub-sleep"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-sleep" style="width:15%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-sleep" style="width:0%"></div></div>
                 </div>
                 <div class="stat-block">
                     <span class="stat-label">MOOD</span>
                     <span class="stat-sub" id="sub-mood"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-mood" style="width:60%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-mood" style="width:0%"></div></div>
                 </div>
                 <div class="stat-block">
                     <span class="stat-label">SYS</span>
                     <span class="stat-sub" id="sub-sys"></span>
-                    <div class="progress-bar"><div class="progress-fill" id="bar-sys" style="width:100%"></div></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bar-sys" style="width:0%"></div></div>
                 </div>
             </header>
 
